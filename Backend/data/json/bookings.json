@@ -1,0 +1,32 @@
+[
+  {
+    "id": "b1",
+    "studentId": "s1",
+    "tutorId": "t1",
+    "subject": "Mathematics",
+    "grade": "Grade 10",
+    "classType": "Individual",
+    "classFormat": "Online",
+    "dateTime": "2026-04-10T10:00:00.000Z",
+    "status": "ACCEPTED",
+    "paymentStatus": "PAID",
+    "price": 2500,
+    "createdAt": "2026-04-01T08:00:00.000Z",
+    "updatedAt": "2026-04-01T09:00:00.000Z"
+  },
+  {
+    "id": "b2",
+    "studentId": "s1",
+    "tutorId": "t2",
+    "subject": "Physics",
+    "grade": "Grade 11",
+    "classType": "Group",
+    "classFormat": "In-Person",
+    "dateTime": "2026-04-12T14:00:00.000Z",
+    "status": "PENDING",
+    "paymentStatus": "PENDING",
+    "price": 1800,
+    "createdAt": "2026-04-02T10:00:00.000Z",
+    "updatedAt": "2026-04-02T10:00:00.000Z"
+  }
+]

@@ -1,0 +1,157 @@
+/* ═══════════════════════════════════════════════════════════════
+   TutorHub AI – Liquid-Glass / Glassmorphism Chat Widget
+   Scoped by .th-ai-chat
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ---------- design tokens ---------- */
+:root {
+  --th-glass-bg: rgba(255, 255, 255, 0.06);
+  --th-glass-border: rgba(255, 255, 255, 0.15);
+  --th-glass-blur: blur(32px) saturate(180%) brightness(1.08);
+  --th-glass-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.20),
+    0 8px 40px rgba(0, 0, 0, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.30);
+  --th-accent: #8B5CF6;
+  --th-accent-rgb: 139, 92, 246;
+}
+
+/* ---------- scrollbar ---------- */
+.th-ai-chat ::-webkit-scrollbar,
+.th-custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.th-ai-chat ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.th-ai-chat ::-webkit-scrollbar-thumb,
+.th-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 999px;
+}
+
+.th-ai-chat ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---------- animated online dot ---------- */
+@keyframes th-pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 4px 1px rgba(52, 211, 153, 0.45);
+  }
+
+  50% {
+    box-shadow: 0 0 10px 3px rgba(52, 211, 153, 0.70);
+  }
+}
+
+.th-online-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34D399;
+  animation: th-pulse-glow 2s ease-in-out infinite;
+}
+
+/* ---------- typing indicator ---------- */
+@keyframes th-bounce {
+
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+}
+
+.th-typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  display: inline-block;
+  animation: th-bounce 1.4s ease-in-out infinite;
+}
+
+.th-typing-dot:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.th-typing-dot:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+/* ---------- bubble entrance ---------- */
+@keyframes th-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.th-bubble-enter {
+  animation: th-bubble-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- panel slide-up ---------- */
+@keyframes th-panel-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.th-panel-enter {
+  animation: th-panel-up 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- FAB pulse ring ---------- */
+@keyframes th-fab-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.th-fab-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(139, 92, 246, 0.50);
+  animation: th-fab-ring 2.5s ease-out infinite;
+}
+
+/* ---------- reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .th-ai-chat * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

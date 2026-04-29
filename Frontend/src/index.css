@@ -1,0 +1,28 @@
+
+/* == CRITICAL: Rounded corners enforcement (overrides Tailwind preflight) == */
+
+/* rounded-full containers MUST clip child images */
+.rounded-full { overflow: hidden !important; border-radius: 9999px !important; }
+.rounded-full > img,
+.rounded-full img {
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* rounded-xl / rounded-2xl / rounded-3xl */
+.rounded-xl  { border-radius: 0.75rem  !important; overflow: hidden; }
+.rounded-2xl { border-radius: 1rem     !important; overflow: hidden; }
+.rounded-3xl { border-radius: 1.5rem   !important; overflow: hidden; }
+
+/* All buttons - never sharp */
+button { border-radius: 0.875rem; }
+button.rounded-full  { border-radius: 9999px  !important; overflow: hidden; }
+button.rounded-2xl   { border-radius: 1rem    !important; }
+button.rounded-3xl   { border-radius: 1.5rem  !important; }
+button.rounded-xl    { border-radius: 0.75rem !important; }
+
+/* Inputs */
+input:not([type=checkbox]):not([type=radio]),
+select, textarea { border-radius: 0.75rem; }

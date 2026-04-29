@@ -1,0 +1,50 @@
+/* ================================================================
+   ROUNDED CORNERS — Enforced after Tailwind preflight
+   This file is imported LAST so it overrides Tailwind's reset
+   which sets border-radius: 0 on many elements.
+   ================================================================ */
+
+/* ── Profile photos / avatars ── always perfectly circular */
+.rounded-full {
+  overflow: hidden !important;
+  border-radius: 9999px !important;
+}
+.rounded-full > img,
+.rounded-full img {
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block;
+}
+/* button.rounded-full wraps images too */
+button.rounded-full {
+  border-radius: 9999px !important;
+  overflow: hidden !important;
+}
+button.rounded-full img {
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Cards ── */
+.rounded-3xl { border-radius: 1.5rem  !important; }
+.rounded-2xl { border-radius: 1rem    !important; }
+.rounded-xl  { border-radius: 0.75rem !important; }
+.rounded-lg  { border-radius: 0.625rem !important; }
+
+/* ── Buttons — never sharp corners ── */
+button {
+  border-radius: 0.75rem;
+}
+button.rounded-full  { border-radius: 9999px  !important; }
+button.rounded-2xl   { border-radius: 1rem    !important; }
+button.rounded-3xl   { border-radius: 1.5rem  !important; }
+button.rounded-xl    { border-radius: 0.75rem !important; }
+
+/* ── Inputs ── */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  border-radius: 0.75rem;
+}

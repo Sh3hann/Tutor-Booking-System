@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorHub Hero - Premium Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-main: #F4F3FF;
+            --primary-indigo: #3D2DB5;
+            --secondary-button-text: #0F0A2E;
+            --heading-dark: #0F0A2E;
+            --gradient-blue: #5B8DEF;
+            --gradient-green: #4DD9AC;
+            --subtext-gray: #6B7280;
+            --stats-indigo: #7B8FCC;
+            --nav-link: #1F1F2E;
+            --badge-bg: #FFFFFF;
+            --green-dot: #22C55E;
+            --card-white: #FFFFFF;
+            --star-gold: #FBBF24;
+            --logo-indigo: #4F46E5;
+            --toggle-periwinkle: #C7D2FE;
+            --btn-get-started: #4F46E5;
+            --chat-purple: #7C3AED;
+            --hero-img-bg: #1A0B2E;
+            --hero-glow: #7E22CE;
+            --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.05);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            overflow-x: hidden;
+            color: var(--heading-dark);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* --- Background blobs --- */
+        .blob {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            background: rgba(124, 58, 237, 0.08);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .blob-1 { top: -10%; left: -10%; }
+        .blob-2 { bottom: -10%; right: -10%; }
+
+        /* --- Navbar --- */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 5%;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--heading-dark);
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background-color: var(--logo-indigo);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--nav-link);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+        .nav-links a:hover { color: var(--primary-indigo); }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .dark-toggle {
+            color: var(--toggle-periwinkle);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        .dark-toggle:hover { opacity: 0.8; }
+
+        .sign-in {
+            text-decoration: none;
+            color: var(--heading-dark);
+            font-weight: 600;
+        }
+        .btn-get-started {
+            background-color: var(--btn-get-started);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+            transition: var(--transition-smooth);
+        }
+        .btn-get-started:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(79, 70, 229, 0.35);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            padding: 4rem 5%;
+            max-width: 1280px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .badge {
+            background-color: var(--badge-bg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            width: fit-content;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-soft);
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--green-dot);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            color: var(--heading-dark);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--gradient-blue), var(--gradient-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--subtext-gray);
+            max-width: 540px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .btn-primary {
+            background-color: var(--primary-indigo);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(61, 45, 181, 0.3);
+            transition: var(--transition-smooth);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(61, 45, 181, 0.4);
+        }
+        .btn-secondary {
+            background-color: white;
+            color: var(--secondary-button-text);
+            padding: 1rem 2rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1.5px solid rgba(0, 0, 0, 0.08);
+            transition: var(--transition-smooth);
+        }
+        .btn-secondary:hover {
+            background-color: #f9f9ff;
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-indigo);
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--stats-indigo);
+            font-weight: 500;
+        }
+
+        /* --- Hero Right Col --- */
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: var(--hero-img-bg);
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hero-image-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 30%, var(--hero-glow), transparent 70%);
+            opacity: 0.4;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+        }
+
+        /* --- Floating Elements --- */
+        .float-card {
+            position: absolute;
+            background-color: var(--card-white);
+            border-radius: 18px;
+            padding: 1rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 220px;
+            z-index: 10;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-top-left { top: 10%; left: -15%; animation-delay: 0s; }
+        .card-bottom-right { bottom: 10%; right: -15%; animation-delay: 1.5s; }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+        .user-info h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; }
+        .user-info p { font-size: 0.7rem; color: var(--subtext-gray); }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+            color: var(--star-gold);
+        }
+        .quote {
+            font-size: 0.75rem;
+            line-height: 1.4;
+            color: var(--subtext-gray);
+            font-style: italic;
+        }
+
+        .badge-rating {
+            position: absolute;
+            top: 5%;
+            right: -5%;
+            background-color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 99px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 0.8rem;
+            z-index: 11;
+        }
+
+        .pill-online {
+            position: absolute;
+            bottom: 5%;
+            left: -5%;
+            background-color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 99px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            z-index: 11;
+        }
+
+        /* --- Chat Bubble --- */
+        .chat-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: var(--chat-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            z-index: 100;
+        }
+        .chat-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 6rem;
+            }
+            .hero-left { align-items: center; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-desc { margin: 0 auto; }
+            .hero-image-container { max-width: 500px; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+            TutorHub
+        </div>
+        <div class="nav-links">
+            <a href="#">Find Tutors</a>
+            <a href="#">Become a Tutor</a>
+            <a href="#">How it works</a>
+            <a href="#">Pricing</a>
+        </div>
+        <div class="nav-actions">
+            <div class="dark-toggle">
+                <i data-lucide="moon"></i>
+            </div>
+            <a href="#" class="sign-in">Sign In</a>
+            <a href="#" class="btn-get-started">Get Started</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-left">
+            <div class="badge">
+                <span class="dot"></span>
+                Join 1,200+ students learning today
+            </div>
+            <h1>
+                Transform Your<br>
+                <span class="gradient-text">Learning Journey</span>
+            </h1>
+            <p class="hero-desc">
+                Experience world-class tutoring with our elite educators. Personalized one-on-one sessions designed to help you master any subject with confidence.
+            </p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">Find Tutors</a>
+                <a href="#" class="btn-secondary">Become a Tutor</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Experts</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">15k+</span>
+                    <span class="stat-label">Lessons</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.9★</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">98%</span>
+                    <span class="stat-label">Success</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <!-- Floating cards -->
+            <div class="float-card card-top-left">
+                <div class="card-header">
+                    <img src="./avatar_female_student_1774972409207.png" alt="Sarah" class="avatar">
+                    <div class="user-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Biology Student</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                </div>
+                <p class="quote">"My tutor helped me ace my finals. The sessions were incredibly helpful!"</p>
+            </div>
+
+            <div class="float-card card-bottom-right">
+                <div class="card-header">
+                    <img src="./avatar_male_tutor_1774972565871.png" alt="David" class="avatar">
+                    <div class="user-info">
+                        <h4>David Miller</h4>
+                        <p>Senior Math Tutor</p>
+                    </div>
+                </div>
+                <div class="stars">
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                    <i data-lucide="star" style="fill: currentColor; width: 12px; height: 12px;"></i>
+                </div>
+                <p class="quote">"I love teaching on TutorHub. The platform is seamless and the kids are great!"</p>
+            </div>
+
+            <div class="badge-rating">
+                <i data-lucide="star" style="color: var(--star-gold); fill: var(--star-gold); width: 16px; height: 16px;"></i>
+                4.9 ★ Avg Rating
+            </div>
+
+            <div class="pill-online">
+                <span class="dot"></span>
+                120+ Online Tutors
+            </div>
+
+            <div class="hero-image-container">
+                <img src="./tutorhub_hero_asset_1774972157595.png" alt="Hero Illustration" class="hero-img">
+            </div>
+        </div>
+    </main>
+
+    <div class="chat-btn">
+        <i data-lucide="message-circle"></i>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

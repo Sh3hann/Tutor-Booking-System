@@ -1,0 +1,203 @@
+/* AdminLogin.css - Premium "Antigravity" Aesthetic */
+
+@keyframes antigravity-bg {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.1);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
+
+.admin-login-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #05050a; /* Deep space background */
+}
+
+.antigravity-particles {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(80, 60, 180, 0.15) 0%, transparent 70%);
+  background-size: 200% 200%;
+  animation: antigravity-bg 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 420px;
+  padding: 48px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 32px 80px rgba(80, 60, 180, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.shield-container {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, rgba(80, 60, 180, 0.4), rgba(40, 30, 90, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.admin-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.admin-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Spacing label -> input */
+  margin-bottom: 24px; /* Spacing between fields */
+}
+
+.admin-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 4px;
+}
+
+.admin-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  padding: 14px 16px !important;
+  color: #ffffff !important;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.admin-input:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(108, 99, 255, 0.5) !important;
+  animation: pulse-glow 2s infinite;
+  outline: none;
+}
+
+.admin-button {
+  width: 100%;
+  height: 52px;
+  background: #6C63FF;
+  color: #ffffff;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 8px;
+}
+
+.admin-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #7b74ff;
+  box-shadow: 0 12px 32px rgba(108, 99, 255, 0.4);
+}
+
+.admin-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.admin-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.back-home {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s ease;
+}
+
+.back-home a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.back-home a:hover {
+  color: #6C63FF;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #ffffff;
+}

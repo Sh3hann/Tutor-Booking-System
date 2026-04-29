@@ -1,0 +1,258 @@
+/* ================================================================
+   TUTOHUB ANIMATIONS & TRANSITIONS
+   Scroll-reveal, micro-interactions, page transitions, parallax
+   ================================================================ */
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blurIn {
+  from { opacity: 0; filter: blur(8px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 111, 255, 0.3); }
+  50%       { box-shadow: 0 0 40px rgba(124, 111, 255, 0.6); }
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(20px, -20px) scale(1.05); }
+  66%       { transform: translate(-15px, 15px) scale(0.97); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Animation Utility Classes ── */
+.animate-fade-up    { animation: fadeUp 0.5s ease forwards; }
+.animate-fade-in    { animation: fadeIn 0.4s ease forwards; }
+.animate-slide-left { animation: slideInLeft 0.5s ease forwards; }
+.animate-slide-right{ animation: slideInRight 0.5s ease forwards; }
+.animate-scale-in   { animation: scaleIn 0.4s ease forwards; }
+.animate-blur-in    { animation: blurIn 0.5s ease forwards; }
+.animate-float      { animation: floatY 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+.animate-blob       { animation: blobFloat 8s ease-in-out infinite; }
+.animate-gradient   { animation: gradientShift 5s ease infinite; background-size: 200% 200%; }
+
+/* Stagger delays */
+.delay-0   { animation-delay: 0s; }
+.delay-75  { animation-delay: 0.075s; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-150 { animation-delay: 0.15s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000{ animation-delay: 1s; }
+
+/* Initially hidden for scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Page Transition Wrapper ── */
+.page-enter {
+  animation: fadeUp 0.45s ease forwards;
+}
+
+/* ── Shimmer loading skeleton ── */
+.skeleton {
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.04) 25%,
+    rgba(255,255,255,0.09) 50%,
+    rgba(255,255,255,0.04) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.5rem;
+}
+
+/* ── Gradient text animation ── */
+.animated-gradient-text {
+  background: linear-gradient(270deg, #7C6FFF, #4F8EFF, #A78BFA, #7C6FFF);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Glow pulse on CTA ── */
+.btn-glow {
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 0 4px rgba(124,111,255,0.15), 0 8px 32px rgba(124,111,255,0.4);
+  transform: translateY(-2px);
+}
+
+/* ── Floating card ── */
+.float-card {
+  animation: floatY 5s ease-in-out infinite;
+}
+.float-card:nth-child(2) { animation-delay: -2.5s; }
+
+/* ── Card hover lift ── */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(60,30,160,0.2), 0 4px 16px rgba(0,0,0,0.3);
+  border-color: rgba(124,111,255,0.25) !important;
+}
+
+/* ── Glow indicator for active nav ── */
+.nav-active {
+  color: #ffffff !important;
+  position: relative;
+}
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7C6FFF, #4F8EFF);
+  border-radius: 99px;
+  box-shadow: 0 0 8px rgba(124,111,255,0.7);
+}
+
+/* ── Progress bar highlight ── */
+.progress-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 99px;
+  overflow: hidden;
+  height: 6px;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #7C6FFF, #4F8EFF);
+  transition: width 0.8s ease;
+}
+
+/* ── Glassmorphism Premium Card ── */
+.premium-card {
+  background: rgba(255,255,255,0.055);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.premium-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.075);
+  border-color: rgba(124,111,255,0.22);
+  box-shadow: 0 12px 40px rgba(60,30,160,0.18);
+}
+
+/* ── Stat number animation ── */
+.stat-number {
+  animation: countUp 0.6s ease forwards;
+}
+
+/* ── Mobile menu transition ── */
+.mobile-menu {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+.mobile-menu.closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ── Notification dot pulse ── */
+.dot-pulse {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(74,222,128,0.5);
+  animation: dot-ring 2s ease-in-out infinite;
+}
+@keyframes dot-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(74,222,128,0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+}
+
+/* ── Smooth scroll reveal (JS-free version using intersection) ── */
+@supports (animation-timeline: scroll()) {
+  .scroll-fade {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+  }
+}

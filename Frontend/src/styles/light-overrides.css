@@ -1,0 +1,347 @@
+/* ================================================================
+   APPLE iOS LIGHT MODE GLOBAL OVERRIDES
+   Background: #F2F2F7 (iOS systemGroupedBackground)
+   Cards:      #FFFFFF (iOS secondarySystemGroupedBackground)
+   Text:       #1C1C1E (iOS label)
+   Blue:       #0284C7 (iOS systemBlue)
+   Borders:    rgba(60,60,67,0.18–0.29)
+   ================================================================ */
+
+/* ══ 1. BASE TEXT ══════════════════════════════════════════════ */
+html.light body { color: #1C1C1E; }
+
+html.light h1, html.light h2, html.light h3,
+html.light h4, html.light h5, html.light h6 {
+  color: #1C1C1E !important;
+}
+
+/* White text → iOS dark label */
+html.light .text-white        { color: #1C1C1E !important; }
+html.light .text-white\/5     { color: rgba(60,60,67,0.50) !important; }
+html.light .text-white\/10    { color: rgba(60,60,67,0.55) !important; }
+html.light .text-white\/20    { color: rgba(60,60,67,0.55) !important; }
+html.light .text-white\/30    { color: rgba(60,60,67,0.60) !important; }
+html.light .text-white\/40    { color: rgba(60,60,67,0.65) !important; }
+html.light .text-white\/50    { color: rgba(60,60,67,0.70) !important; }
+html.light .text-white\/60    { color: rgba(60,60,67,0.75) !important; }
+html.light .text-white\/70    { color: rgba(60,60,67,0.80) !important; }
+html.light .text-white\/80    { color: #3A3A3C !important; }
+html.light .text-white\/90    { color: #2C2C2E !important; }
+html.light .text-white\/95    { color: #1C1C1E !important; }
+
+html.light .text-gray-400     { color: rgba(60,60,67,0.60) !important; }
+html.light .text-gray-500     { color: rgba(60,60,67,0.70) !important; }
+html.light .text-gray-600     { color: rgba(60,60,67,0.80) !important; }
+
+/* formerly subtle purple → iOS secondary label */
+html.light [style*="color: '#c4b5fd'"],
+html.light [style*="color:'#c4b5fd'"],
+html.light [style*="color: #c4b5fd"],
+html.light [style*="color:#c4b5fd"]   { color: #0284C7 !important; }
+
+html.light [style*="color: '#a89cff'"],
+html.light [style*="color:'#a89cff'"],
+html.light [style*="color: #a89cff"],
+html.light [style*="color:#a89cff"]   { color: #0284C7 !important; }
+
+html.light [style*="color: '#a78bfa'"],
+html.light [style*="color: #a78bfa"]  { color: #0284C7 !important; }
+
+html.light [style*="rgba(200,190,255"],
+html.light [style*="rgba(200,200,255"] { color: #3A3A3C !important; }
+
+html.light [style*="color: '#8888AA'"],
+html.light [style*="color:#8888AA"],
+html.light [style*="color: #8888AA"]  { color: rgba(60,60,67,0.65) !important; }
+
+html.light [style*="color: '#6666AA'"],
+html.light [style*="color:#6666AA"]   { color: rgba(60,60,67,0.70) !important; }
+
+html.light [style*="color: '#7070A0'"],
+html.light [style*="color:#7070A0"]   { color: rgba(60,60,67,0.65) !important; }
+
+html.light [style*="rgba(200,190,255,0.7)"] { color: #3A3A3C !important; }
+
+/* ══ 2. CARD / PANEL BACKGROUNDS ══════════════════════════════ */
+html.light .bg-white\/5  { background-color: #FFFFFF !important; }
+html.light .bg-white\/6  { background-color: #FFFFFF !important; }
+html.light .bg-white\/7  { background-color: #FFFFFF !important; }
+html.light .bg-white\/8  { background-color: #FFFFFF !important; }
+html.light .bg-white\/10 { background-color: #FFFFFF !important; }
+html.light .bg-white\/15 { background-color: #FFFFFF !important; }
+html.light .bg-white\/20 { background-color: #FFFFFF !important; }
+html.light .bg-white\/30 { background-color: #FFFFFF !important; }
+
+html.light .bg-black\/10 { background-color: #FFFFFF !important; }
+html.light .bg-black\/20 { background-color: #FFFFFF !important; }
+html.light .bg-black\/30 { background-color: #FFFFFF !important; }
+html.light .bg-black\/40 { background-color: #FFFFFF !important; }
+html.light .bg-black\/50 { background-color: rgba(255,255,255,0.97) !important; }
+html.light .bg-black\/60 { background-color: rgba(255,255,255,0.98) !important; }
+
+/* Inline dark glass → white card */
+html.light [style*="rgba(255,255,255,0.055)"],
+html.light [style*="rgba(255,255,255,0.05)"],
+html.light [style*="rgba(255,255,255,0.04)"],
+html.light [style*="rgba(255,255,255,0.07)"] {
+  background: #FFFFFF !important;
+  border-color: rgba(60,60,67,0.16) !important;
+}
+
+html.light [style*="rgba(6,4,15"] {
+  background: #FFFFFF !important;
+  border-color: rgba(60,60,67,0.15) !important;
+}
+
+html.light [style*="rgba(0,0,0,0.3)"],
+html.light [style*="rgba(0,0,0,0.4)"],
+html.light [style*="rgba(0,0,0,0.5)"] {
+  background: #FFFFFF !important;
+  border-color: rgba(60,60,67,0.15) !important;
+}
+
+/* Rounded bordered cards */
+html.light [class*="rounded-3xl"][class*="border"],
+html.light [class*="rounded-2xl"][class*="border"] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(60,60,67,0.14) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06) !important;
+}
+
+html.light .backdrop-blur-lg.rounded-2xl,
+html.light .backdrop-blur-lg.rounded-3xl {
+  background-color: #FFFFFF !important;
+  border-color: rgba(60,60,67,0.14) !important;
+}
+
+/* ══ 3. BORDERS ════════════════════════════════════════════════ */
+html.light .border-white\/5  { border-color: rgba(60,60,67,0.10) !important; }
+html.light .border-white\/6  { border-color: rgba(60,60,67,0.12) !important; }
+html.light .border-white\/8  { border-color: rgba(60,60,67,0.14) !important; }
+html.light .border-white\/10 { border-color: rgba(60,60,67,0.16) !important; }
+html.light .border-white\/15 { border-color: rgba(60,60,67,0.18) !important; }
+html.light .border-white\/20 { border-color: rgba(60,60,67,0.20) !important; }
+html.light .border-white\/30 { border-color: rgba(60,60,67,0.24) !important; }
+html.light hr { border-color: rgba(60,60,67,0.16) !important; }
+
+/* ══ 4. HEADER / NAVBAR ═══════════════════════════════════════ */
+html.light header {
+  background: rgba(242,242,247,0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(60,60,67,0.16) !important;
+}
+html.light header * { color: #1C1C1E; }
+html.light header .text-white,
+html.light header span,
+html.light header a { color: #1C1C1E !important; }
+
+html.light .glass-header {
+  background: rgba(242,242,247,0.92) !important;
+  border-bottom: 1px solid rgba(60,60,67,0.16) !important;
+}
+
+html.light nav a, html.light nav span, html.light nav button {
+  color: #1C1C1E !important;
+}
+html.light nav a:hover { color: #0284C7 !important; }
+
+/* ══ 5. MODALS / DIALOGS ══════════════════════════════════════ */
+html.light [role="dialog"] {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(60,60,67,0.16) !important;
+  color: #1C1C1E !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+html.light [role="dialog"] * { color: #1C1C1E; }
+html.light [role="dialog"] h2, html.light [role="dialog"] h3 { color: #1C1C1E !important; }
+html.light [role="dialog"] p, html.light [role="dialog"] span { color: #3A3A3C; }
+html.light [role="dialog"] .text-white { color: #1C1C1E !important; }
+
+html.light .fixed.inset-0.bg-black\/50 { background-color: rgba(0,0,0,0.35) !important; }
+html.light .fixed.inset-0.bg-black\/60 { background-color: rgba(0,0,0,0.40) !important; }
+html.light .fixed.inset-0.bg-black\/70 { background-color: rgba(0,0,0,0.45) !important; }
+
+/* ══ 6. INPUTS ════════════════════════════════════════════════ */
+html.light input:not([type="checkbox"]):not([type="radio"]):not(.sr-only),
+html.light textarea, html.light select {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(60,60,67,0.22) !important;
+  color: #1C1C1E !important;
+}
+html.light input::placeholder, html.light textarea::placeholder {
+  color: rgba(60,60,67,0.36) !important;
+}
+html.light input:focus, html.light textarea:focus {
+  border-color: #0284C7 !important;
+  box-shadow: 0 0 0 3px rgba(2,132,199,0.14) !important;
+  outline: none !important;
+}
+html.light select { color-scheme: light !important; }
+html.light select option { background: #FFFFFF !important; color: #1C1C1E !important; }
+
+/* ══ 7. BACK BUTTONS ══════════════════════════════════════════ */
+html.light .back-btn {
+  background: rgba(2,132,199,0.06) !important;
+  border: 1px solid rgba(2,132,199,0.18) !important;
+  color: #0284C7 !important;
+}
+html.light .back-btn svg, html.light .back-btn * { color: #0284C7 !important; }
+
+/* ══ 8. TABLES ════════════════════════════════════════════════ */
+html.light table { color: #1C1C1E; }
+html.light th { color: #1C1C1E !important; border-color: rgba(60,60,67,0.16); }
+html.light td { color: #1C1C1E !important; border-color: rgba(60,60,67,0.10); }
+html.light tbody tr:hover { background-color: rgba(2,132,199,0.04) !important; }
+
+/* ══ 9. GHOST BUTTONS ══════════════════════════════════════════ */
+html.light [style*="rgba(255,255,255,0.07)"][style*="border"],
+html.light [style*="rgba(255,255,255,0.12)"][style*="border"] {
+  background: rgba(255,255,255,0.95) !important;
+  border-color: rgba(60,60,67,0.18) !important;
+  color: #1C1C1E !important;
+}
+
+/* ══ 10. HERO / BANNER SECTIONS ════════════════════════════════ */
+html.light [style*="rgba(108,99,255,0.22)"],
+html.light [style*="rgba(108,99,255,0.18)"],
+html.light [style*="rgba(108,99,255,0.10)"] {
+  background: rgba(255,255,255,0.85) !important;
+  border-color: rgba(2,132,199,0.18) !important;
+}
+html.light [style*="rgba(124,58,237,0.2)"],
+html.light [style*="rgba(124,58,237,0.12)"] {
+  background: rgba(255,255,255,0.80) !important;
+  border-color: rgba(2,132,199,0.18) !important;
+}
+
+/* ══ 11. FEATURE SECTIONS ═════════════════════════════════════ */
+html.light [style*="rgba(108,99,255,0.07)"],
+html.light [style*="rgba(108,99,255,0.06)"] {
+  background: rgba(255,255,255,0.88) !important;
+  border-color: rgba(60,60,67,0.13) !important;
+}
+
+/* ══ 12. BADGE PILLS ══════════════════════════════════════════ */
+html.light [style*="rgba(108,99,255,0.15)"] {
+  background: rgba(2,132,199,0.08) !important;
+}
+html.light [style*="rgba(108,99,255,0.15)"] span,
+html.light [style*="rgba(108,99,255,0.15)"] {
+  color: #0284C7 !important;
+}
+html.light [style*="'#a89cff'"],
+html.light [style*="color: #a89cff"] { color: #0284C7 !important; }
+html.light [style*="'#c4b5fd'"],
+html.light [style*="color: #c4b5fd"] { color: #0284C7 !important; }
+html.light [style*="color: #a78bfa"]  { color: #0284C7 !important; }
+
+/* ══ 13. ADMIN SUBJECT MANAGEMENT ════════════════════════════ */
+html.light [style*="linear-gradient(90deg, #FFFFFF"] {
+  background-image: none !important;
+}
+html.light [class*="bg-clip-text"] {
+  -webkit-text-fill-color: #1C1C1E !important;
+  color: #1C1C1E !important;
+}
+html.light .text-transparent {
+  color: #1C1C1E !important;
+  -webkit-text-fill-color: #1C1C1E !important;
+}
+html.light [style*="rgba(255,255,255,0.05)"][style*="backdrop-filter"],
+html.light [style*="rgba(255,255,255,0.05)"][style*="blur"] {
+  background: #FFFFFF !important;
+  border-color: rgba(60,60,67,0.14) !important;
+}
+html.light [style*="color: #E8E8F0"],
+html.light [style*="color:#E8E8F0"] { color: #3A3A3C !important; }
+
+/* ══ 14. BRAIN QUIZ ══════════════════════════════════════════ */
+html.light .bg-\[\#06040f\] { background-color: #F2F2F7 !important; }
+html.light [style*="rgba(255,255,255,0.04)"][class*="rounded"] {
+  background: #FFFFFF !important;
+}
+html.light [style*="rgba(255,255,255,0.04)"] p,
+html.light [style*="rgba(255,255,255,0.04)"] span { color: #1C1C1E !important; }
+html.light [style*="rgba(255,255,255,0.04)"] button { color: #3A3A3C !important; }
+html.light [style*="rgba(255,255,255,0.03)"] {
+  background: rgba(255,255,255,0.90) !important;
+  border-color: rgba(60,60,67,0.16) !important;
+  color: #3A3A3C !important;
+}
+html.light [style*="rgba(108,99,255,0.25)"] { color: #0284C7 !important; }
+html.light [style*="rgba(59,130,246,0.2)"]  { color: #0284C7 !important; }
+html.light [style*="color: #93c5fd"],
+html.light [style*="color:#93c5fd"] { color: #0284C7 !important; }
+
+/* ══ 15. HOVER ════════════════════════════════════════════════ */
+html.light .hover\:bg-white\/10:hover {
+  background-color: rgba(2,132,199,0.06) !important;
+}
+
+/* ══ 16. SCROLLBAR ════════════════════════════════════════════ */
+html.light ::-webkit-scrollbar-thumb { background: rgba(60,60,67,0.25); }
+html.light ::-webkit-scrollbar-thumb:hover { background: rgba(60,60,67,0.45); }
+
+/* ══ 17. DARK PANEL FORCE LIGHT TEXT ════════════════════════ */
+html.light [style*="rgba(255,255,255,0.07)"] p,
+html.light [style*="rgba(255,255,255,0.07)"] span,
+html.light [style*="rgba(255,255,255,0.07)"] h1,
+html.light [style*="rgba(255,255,255,0.07)"] h2,
+html.light [style*="rgba(255,255,255,0.07)"] h3 { color: #1C1C1E !important; }
+html.light [style*="rgba(255,255,255,0.055)"] p,
+html.light [style*="rgba(255,255,255,0.055)"] span,
+html.light [style*="rgba(255,255,255,0.055)"] h3 { color: #1C1C1E !important; }
+html.light [style*="rgba(6,4,15"] * { color: #1C1C1E !important; }
+html.light [style*="rgba(0,0,0,0.3)"] * { color: #1C1C1E !important; }
+
+/* ══ 18. GENERAL CATCH-ALL ════════════════════════════════════ */
+html.light .min-h-screen, html.light main,
+html.light section, html.light article { color: #1C1C1E; }
+html.light label { color: #3A3A3C !important; }
+html.light p { color: #3A3A3C; }
+html.light span { color: #3A3A3C; }
+
+html.light span[style*="color"] { color: unset; }
+html.light span[class*="text-"] { color: unset; }
+
+/* ══ 19. PURPLE → APPLE BLUE REPLACEMENTS ══════════════════ */
+/* Replace all hardcoded purple gradients in light mode */
+html.light [style*="linear-gradient(135deg,#6C63FF"],
+html.light [style*="linear-gradient(135deg, #6C63FF"] {
+  background: linear-gradient(135deg, #0284C7, #0051A8) !important;
+}
+html.light [style*="linear-gradient(135deg,#7C3AED"],
+html.light [style*="linear-gradient(135deg, #7C3AED"] {
+  background: linear-gradient(135deg, #0284C7, #0051A8) !important;
+}
+html.light [style*="box-shadow"][style*="rgba(108,99,255"] {
+  box-shadow: 0 4px 20px rgba(2,132,199,0.20) !important;
+}
+
+/* ══ 20. iOS GROUPED SECTIONS ════════════════════════════════ */
+/* Grouped table-style sections (like iOS Settings) */
+html.light .ios-group {
+  background: #FFFFFF;
+  border-radius: 0.875rem;
+  border: 1px solid rgba(60,60,67,0.14);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+html.light .ios-group + .ios-group { margin-top: 1.5rem; }
+html.light .ios-row {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid rgba(60,60,67,0.10);
+  color: #1C1C1E;
+  gap: 0.75rem;
+}
+html.light .ios-row:last-child { border-bottom: none; }
+
+/* == 21. GLOBAL ROUNDED CORNERS � light mode == */
+html.light button, html.light [role=button] { border-radius: 0.875rem; }
+html.light input:not([type=checkbox]):not([type=radio]), html.light select, html.light textarea { border-radius: 0.75rem; border: 1px solid rgba(60,60,67,0.22); background: #FFFFFF; color: #1C1C1E; }
+html.light select option { background: #FFFFFF; color: #1C1C1E; }
+html.light .rounded-full { overflow: hidden; }
+html.light .rounded-full img { border-radius: 50%; object-fit: cover; }

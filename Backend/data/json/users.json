@@ -1,0 +1,82 @@
+[
+  {
+    "id": "57993a81-318b-4c35-8a5a-206289505c46",
+    "email": "student@gmail.com",
+    "passwordHash": "$2a$10$QlNbNRXcsnnP9WamOYUvrOEgsPoHzvT4SUcEqqPcVF4SrEkOwneiK",
+    "fullName": "student@gmail.com",
+    "role": "student",
+    "createdAt": "2026-02-28T14:23:58.820Z"
+  },
+  {
+    "id": "c9f963b6-0dd6-492f-8e4a-9c451b381cc0",
+    "email": "tutor@gmail.com",
+    "passwordHash": "$2a$10$IY8hC1PRAh4TR572QZQkE.P69SU.UBwLJtyzFp4EJj2Fzi6WoJOjS",
+    "fullName": "tutor@gmail.com",
+    "role": "tutor",
+    "createdAt": "2026-02-28T14:25:05.962Z"
+  },
+  {
+    "id": "42d1b286-8cf4-4dcd-a706-0a6bb899a2ef",
+    "email": "tutor1@gmail.com",
+    "passwordHash": "$2a$10$GrpxEz4UqVLtOgYpbCNAj.CRncNNq2Pm7UzAr0dT0/DjoY8hivgyi",
+    "fullName": "tutor1",
+    "role": "tutor",
+    "createdAt": "2026-03-01T00:24:37.636Z"
+  },
+  {
+    "id": "cd5d82f7-40aa-42bf-b3b7-157509cd273b",
+    "email": "methvanjayaweera@gmail.com",
+    "passwordHash": "$2a$10$TC0d/DAuqXuCMMuln5pOr.OgKngzidqji12gJamAtzg/FiqQhm47S",
+    "fullName": "methvan",
+    "role": "tutor",
+    "createdAt": "2026-03-01T01:30:56.168Z"
+  },
+  {
+    "id": "a421bb20-adc8-41bd-a94f-74ca625df305",
+    "email": "admin@gmail.com",
+    "passwordHash": "$2a$10$mE1AyH51IB3Pac.tAppd8.X1KODHj1eJknB9CZAvvcqXUO0M2TUwO",
+    "fullName": "Admin",
+    "role": "admin",
+    "createdAt": "2026-03-01T01:42:41.186Z"
+  },
+  {
+    "id": "71f9cce3-3f48-4eda-883f-032735dcd548",
+    "email": "achintha@gmail.com",
+    "passwordHash": "$2a$10$YCsepyFT60gK2AzCoFta/OZyt8H4txsCxOf.9FYy1ty2BeAyii2WO",
+    "fullName": "achintha",
+    "role": "tutor",
+    "createdAt": "2026-03-01T02:04:54.361Z"
+  },
+  {
+    "id": "c65b62cd-6a95-45d5-9032-92d0462ea863",
+    "email": "testtutor@gmail.com",
+    "passwordHash": "$2a$10$AaXXO0uj6gKOMxRb6Wpuyua4R/0ISf7fmvUDENTgw3eN5.LmfCsA.",
+    "fullName": "testtutor",
+    "role": "tutor",
+    "createdAt": "2026-03-01T09:40:30.129Z"
+  },
+  {
+    "id": "2d5e2263-278a-4695-af78-fe6358bcd081",
+    "email": "akilshehan760@gmail.com",
+    "passwordHash": "$2a$10$X8FMoD.UFNqYg0nWJeCCLeelBvpYHkeCWF.QBLBI4rrX4rodN1/M.",
+    "fullName": "Shehan",
+    "role": "tutor",
+    "createdAt": "2026-03-01T11:32:35.341Z"
+  },
+  {
+    "id": "34adc5ea-018d-4955-8b28-3f83c2dd37c3",
+    "email": "achinthalakshan275@gmail.com",
+    "passwordHash": "$2a$10$rwEjGADs55.evBozmgfvcO84FD5wcTzcqGI.10/L7RbLRAdDsiGGC",
+    "fullName": "Achintha",
+    "role": "tutor",
+    "createdAt": "2026-03-01T15:05:19.310Z"
+  },
+  {
+    "id": "91221154-6afd-48f0-b348-3eb8a780441f",
+    "email": "lakshanachintha739@gmail.com",
+    "passwordHash": "$2a$10$sVNGmACBB/MrEa0qHJItYeezn0O4DZF0WXA/rFzWBqDxv58reQg.i",
+    "fullName": "Achintha Lakshan Gunasinghe",
+    "role": "student",
+    "createdAt": "2026-03-01T16:20:54.742Z"
+  }
+]

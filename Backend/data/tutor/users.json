@@ -1,0 +1,108 @@
+[
+  {
+    "id": "0d541547-fc32-4fc3-8e5d-360451b0cc1f",
+    "email": "muthugala@gmail.com",
+    "passwordHash": "$2a$10$q.OteqAjyJHPvdIc/UKNquKZghH2ifp2KuOpPE5540HwpISEpxuHi",
+    "fullName": "Dinesh Muthugala",
+    "role": "tutor",
+    "createdAt": "2026-03-30T16:38:15.085Z"
+  },
+  {
+    "id": "98d26b62-2936-43ec-897f-50da208b09f3",
+    "email": "prasanna@gmail.com",
+    "passwordHash": "$2a$10$hnewiuagtAOOFzvs9sqmduz7nuCsa8syC7LUbm4VaWJElTbLBpK3O",
+    "fullName": "Prasanna Baddewithana",
+    "role": "tutor",
+    "createdAt": "2026-03-30T16:40:57.417Z"
+  },
+  {
+    "id": "342079f0-67ef-4967-87db-3611b8a84ab6",
+    "email": "ravindu@gmail.com",
+    "passwordHash": "$2a$10$BXnAkaeDcKtPascpVCSx6erENmv7MsdLcDqic4RDmZHOlqXgr8iD6",
+    "fullName": "Ravindu Bandaranayake",
+    "role": "tutor",
+    "createdAt": "2026-03-30T16:46:51.036Z"
+  },
+  {
+    "id": "b6262ea9-a2f3-4f2f-b0d0-c809f79dd536",
+    "email": "bandara@gmail.com",
+    "passwordHash": "$2a$10$IZEHWQWY6LVZOjHMwEjZp..TGhawGAaPAiTR9laphQr.4fBFS.YeK",
+    "fullName": "Bandara Dissanayake",
+    "role": "tutor",
+    "createdAt": "2026-03-30T16:54:45.908Z"
+  },
+  {
+    "id": "4daf2ef8-f282-4e87-83af-15a5450d83d4",
+    "email": "akilshehan760@gmail.com",
+    "passwordHash": "$2a$10$h/zCRLx4IIucHv2a7VtdRus0to5.O.HyHmp6dWFp3nUzkLsIgNi6C",
+    "fullName": "Akil Shehan",
+    "role": "tutor_pending",
+    "createdAt": "2026-04-27T06:17:30.228Z"
+  },
+  {
+    "id": "e16d5e93-60b7-4bb9-afc1-9447b3628fa6",
+    "email": "senikma@gmail.com",
+    "passwordHash": "$2a$10$B1Z7B8PuJSTSozf8Y0sCBu7ZKtteb7Vlv2nlJUc6LIKNc4DMtsUUi",
+    "fullName": "Senikma",
+    "role": "institute_manager",
+    "isInstituteManager": true,
+    "instituteRegistrationNo": "MOE - 1111",
+    "instituteName": "SENIKMA",
+    "createdAt": "2026-04-27T17:17:37.207Z"
+  },
+  {
+    "id": "3f2506fa-9d54-4fca-801d-6ad9c5757e00",
+    "email": "sasip@gmail.com",
+    "passwordHash": "$2a$10$l24qD0Z4ZH1SbSqQL/Lfk.7bgwZpf231OFV.AQ9IswAQAY2aE3JPO",
+    "fullName": "Sasip",
+    "role": "institute_manager",
+    "isInstituteManager": true,
+    "instituteRegistrationNo": "MOE - 2222",
+    "instituteName": "SASIP",
+    "createdAt": "2026-04-27T17:20:58.335Z"
+  },
+  {
+    "id": "5b600707-5b03-4517-a39e-6b570cb67b02",
+    "email": "sigma@gmail.com",
+    "passwordHash": "$2a$10$865QagASTnEBF3UvWk0oYOQ4ktot2v6uJkGVwXOyAqdLbFlen81wO",
+    "fullName": "sigma",
+    "role": "institute_manager",
+    "isInstituteManager": true,
+    "instituteRegistrationNo": "MOE - 3333",
+    "instituteName": "SIGMA",
+    "createdAt": "2026-04-27T17:23:52.564Z"
+  },
+  {
+    "id": "6821ca92-6d1e-454c-a455-4077420ecd13",
+    "email": "montana@gmail.com",
+    "passwordHash": "$2a$10$Jbe/FINt3ZVE9iIiXTid2erq.70IZpFM6tRqTY1ZjX8HXS78CJbbG",
+    "fullName": "montana",
+    "role": "institute_manager",
+    "isInstituteManager": true,
+    "instituteRegistrationNo": "MOE - 4444",
+    "instituteName": "MONTANA",
+    "createdAt": "2026-04-27T17:26:36.479Z"
+  },
+  {
+    "id": "af17b2e1-e379-4d85-a324-e354baa93154",
+    "email": "syzygy@gmail.com",
+    "passwordHash": "$2a$10$sbmu2zf4S5HtiOTiKXYCR.5RkFqNtj9zStsd4Oc8hBdSdyLvrkORe",
+    "fullName": "syzygy",
+    "role": "institute_manager",
+    "isInstituteManager": true,
+    "instituteRegistrationNo": "MOE - 5555",
+    "instituteName": "SYZYGY",
+    "createdAt": "2026-04-27T17:29:00.642Z"
+  },
+  {
+    "id": "2e982e7c-1c7e-4403-9f19-53b729f87c7c",
+    "email": "example@gmail.com",
+    "passwordHash": "$2a$10$JCoI5onnFS9m1khbwcxcSuCndaReTvabhXJhT4XB.DTKo2tWHlPoi",
+    "fullName": "eref",
+    "role": "institute_manager",
+    "isInstituteManager": true,
+    "instituteRegistrationNo": "ms 333",
+    "instituteName": "royal",
+    "createdAt": "2026-04-28T03:23:16.390Z"
+  }
+]
