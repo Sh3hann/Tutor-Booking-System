@@ -1,54 +1,96 @@
 <div align="center">
 
-# 📚 TutorHub — Modern Tutoring & Educational Booking Marketplace
-### Connecting Students, Verified Tutors, and Educational Institutes
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=18,12,32&height=200&section=header&text=📚%20TutorHub&fontSize=46&fontAlignY=36&desc=Full-Stack%20EdTech%20%7C%20Tutor%20Marketplace%20%7C%20AI%20Study%20Hub&descAlignY=58&descSize=16&fontColor=ffffff" width="100%" alt="TutorHub Header" />
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tutor-booking-system-eight.vercel.app)
-[![React](https://img.shields.io/badge/React-18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+  <p align="center">
+    <b>A modern educational tutoring marketplace connecting students, certified tutors, and academic institutes with automated scheduling, live chat, and AI study assistance.</b>
+  </p>
 
-<p align="center">
-  <a href="https://tutor-booking-system-eight.vercel.app"><b>🚀 Visit Live Platform</b></a> •
-  <a href="#-key-features"><b>Explore Features</b></a> •
-  <a href="#-tech-stack"><b>Tech Stack</b></a> •
-  <a href="#-getting-started"><b>Local Setup</b></a>
-</p>
+  <p align="center">
+    <a href="https://tutor-booking-system-eight.vercel.app" target="_blank">
+      <img src="https://img.shields.io/badge/🌐_Live_Demo-Launch_TutorHub-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/Sh3hann/Tutor-Booking-System">
+      <img src="https://img.shields.io/badge/💻_Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code" />
+    </a>
+  </p>
+
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Express.js-Backend-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
+    <img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+    <img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License" />
+  </p>
 
 </div>
 
 ---
 
-## ⚡ Key Features
+## ⚡ Core Operational Features
 
-- 🔍 **Smart Tutor Discovery**: Search, filter, and compare tutors based on subject matter, hourly rate, rating, language, and curriculum levels.
-- 📅 **Real-Time Booking & Scheduling**: Seamless calendar booking engine allowing students to select time slots with automated conflict resolution.
-- 🤖 **AI Study Companion**: Integrated conversational AI assistant helping students with homework hints and study planning.
-- 💬 **Live Chat & Messaging**: Real-time direct messaging between students and tutors to discuss lesson goals and materials.
-- 🏢 **Institute Management Portal**: Special multi-tutor dashboards for coaching academies and institutes to manage faculty and collective schedules.
-- 💳 **Tiered Subscriptions & Payments**: Flexible membership tiers and secure payment processing for premium tutoring packages.
-- 🛡️ **Role-Based Security**: Complete JWT-authenticated access control for 4 user archetypes: **Students**, **Tutors**, **Institutes**, and **Super Admins**.
+<div align="center">
+
+| Feature | Operational Scope | Benefit |
+|:---|:---|:---|
+| 🔍 **Smart Tutor Directory** | Dynamic search by subject, curriculum level, hourly rate, verified badges, and student reviews. | Direct access to vetted, qualified educators tailored to individual student needs. |
+| 📅 **Calendar & Session Booking** | Real-time booking engine with conflict resolution and automated email confirmations. | Prevents scheduling overlaps and manages student lesson calendars effortlessly. |
+| 🤖 **AI Study Assistant** | Integrated educational AI assistant helping students break down complex concepts and study plans. | Continuous 24/7 learning support outside of scheduled tutoring sessions. |
+| 💬 **Direct Messaging & Chat** | Real-time communication channels between students and tutors for lesson prep and homework queries. | Keeps student-tutor dialogue centralized, organized, and secure. |
+| 🏢 **Institute Multi-Tutor Hub** | Specialized organizational portal for coaching academies to manage faculties and course schedules. | Centralizes administration for multi-tutor educational institutions. |
+| 🛡️ **Role-Based Security** | JWT-authenticated role separation for **Students**, **Tutors**, **Institutes**, and **Admins**. | Guarantees tailored dashboards and airtight data privacy across user tiers. |
+
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ System Architecture
 
-### Frontend
-- **Framework**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Hosting**: [Vercel](https://vercel.com/)
+`mermaid
+graph LR
+    subgraph Client ["Frontend Architecture (React + Vite)"]
+        SPA["Single Page App"]
+        ROUTER["App Router"]
+        AUTH_CTX["Auth & Role Context"]
+        API_LAYER["API Gateway Service"]
+    end
 
-### Backend
-- **Runtime**: [Node.js](https://nodejs.org/)
-- **Framework**: [Express.js](https://expressjs.com/)
-- **Database**: [MongoDB](https://www.mongodb.com/) via Mongoose ODM
-- **Authentication**: JSON Web Tokens (JWT) & cryptjs
-- **Architecture**: Modular RESTful API route architecture
+    subgraph Server ["Express.js REST Engine"]
+        MW["JWT & Auth Middleware"]
+        ROUTERS["Domain Routes<br/>(Tutors, Bookings, Chat, Institutes)"]
+        AI_ROUTER["AI Learning Engine"]
+    end
+
+    subgraph Database ["Persistence Layer"]
+        MONGO[("MongoDB Atlas")]
+    end
+
+    SPA --> ROUTER --> AUTH_CTX --> API_LAYER
+    API_LAYER --> MW --> ROUTERS
+    API_LAYER --> MW --> AI_ROUTER
+    ROUTERS --> MONGO
+    AI_ROUTER --> MONGO
+`
+
+<details>
+<summary><b>📂 View Modular Codebase Architecture</b></summary>
+
+`
+Tutor-Booking-System/
+├── Frontend/                 # React 18 + TypeScript + Vite Client
+│   ├── src/app/              # Application views (search, booking, dashboard, chat)
+│   ├── src/components/       # UI building blocks (cards, modals, badges)
+│   └── vite.config.ts        # Bundler configuration
+├── Backend/                  # Express RESTful Micro-Engine
+│   ├── routes/               # API endpoints (auth, tutors, bookings, ai-chat, institutes)
+│   ├── middleware/           # Role-based access control & token verification
+│   ├── config/               # Database connection pooling
+│   └── server.js             # API server entrypoint
+`
+
+</details>
 
 ---
 
@@ -60,56 +102,32 @@ git clone https://github.com/Sh3hann/Tutor-Booking-System.git
 cd Tutor-Booking-System
 `
 
-### 2. Setup and Run Backend
+### 2. Launch Backend
 `ash
 cd Backend
 npm install
-# Configure your .env (PORT, MONGO_URI, JWT_SECRET)
 npm run dev
 `
 
-### 3. Setup and Run Frontend
+### 3. Launch Frontend
 `ash
 cd ../Frontend
 npm install
 npm run dev
 `
 
-The application will run on http://localhost:5173 with backend API on http://localhost:5000.
+Open **http://localhost:5173** to access the web application.
 
 ---
 
-## 📂 Repository Structure
+<div align="center">
 
-`
-Tutor-Booking-System/
-├── Backend/
-│   ├── config/              # MongoDB connection & server configuration
-│   ├── middleware/          # JWT auth, RBAC & error handlers
-│   ├── routes/              # REST endpoints (auth, tutors, bookings, ai-chat, institutes)
-│   ├── utils/               # Token generators & business logic helpers
-│   └── server.js            # Express server initialization
-│
-├── Frontend/
-│   ├── src/
-│   │   ├── app/             # Application views & pages
-│   │   ├── components/      # UI widgets, modal dialogs & cards
-│   │   └── main.tsx         # React app entry point
-│   ├── index.html           # HTML template
-│   └── vite.config.ts       # Vite bundler configuration
-`
+### 👨‍💻 Developed with Precision by [Akil Shehan](https://github.com/Sh3hann)
 
----
+[![Website](https://img.shields.io/badge/Portfolio-itzshehan.xyz-f59e0b?style=flat-square&logo=google-chrome&logoColor=white)](https://itzshehan.xyz/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Akil_Shehan-0077b5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akil-shehan-b808b340b)
+[![GitHub](https://img.shields.io/badge/GitHub-@Sh3hann-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Sh3hann)
 
-## 👤 Author
+<sub>© 2026 TutorHub. Released under the MIT License.</sub>
 
-**Akil Shehan**
-- Live Demo: [tutor-booking-system-eight.vercel.app](https://tutor-booking-system-eight.vercel.app)
-- Portfolio: [itzshehan.xyz](https://itzshehan.xyz/)
-- GitHub: [@Sh3hann](https://github.com/Sh3hann)
-- LinkedIn: [Akil Shehan](https://www.linkedin.com/in/akil-shehan-b808b340b)
-
----
-
-## 📄 License
-This project is licensed under the MIT License.
+</div>
