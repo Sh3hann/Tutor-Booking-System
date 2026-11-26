@@ -67,22 +67,22 @@ graph LR
 
 ```text
 Tutor-Booking-System/
-â”œâ”€â”€ Backend/
-â”‚   â”œâ”€â”€ config/mongodb.js      # MongoDB connection with in-memory fallback
-â”‚   â”œâ”€â”€ data/                  # Sample seed datasets & role organizers
-â”‚   â”œâ”€â”€ middleware/auth.js     # JWT authentication middleware
-â”‚   â”œâ”€â”€ routes/                # auth, tutors, bookings, chat, institutes, admin, ai-chat, subscription, users
-â”‚   â”œâ”€â”€ utils/notifications.js
-â”‚   â”œâ”€â”€ .env.example
-â”‚   â””â”€â”€ server.js              # Express + Socket.IO entry point
-â”œâ”€â”€ Frontend/
-â”‚   â”œâ”€â”€ src/app/
-â”‚   â”‚   â”œâ”€â”€ components/        # Chatbot widget, UI primitives & admin components
-â”‚   â”‚   â”œâ”€â”€ contexts/          # Auth, ChatAuth, Theme & TutorOnboarding contexts
-â”‚   â”‚   â”œâ”€â”€ pages/             # 35+ role-based pages & workflows
-â”‚   â”‚   â””â”€â”€ utils/             # REST & Socket.IO service wrappers
-â”‚   â””â”€â”€ package.json
-â””â”€â”€ LICENSE
+├── Backend/
+│   ├── config/mongodb.js      # MongoDB connection with in-memory fallback
+│   ├── data/                  # Sample seed datasets & role organizers
+│   ├── middleware/auth.js     # JWT authentication middleware
+│   ├── routes/                # auth, tutors, bookings, chat, institutes, admin, ai-chat, subscription, users
+│   ├── utils/notifications.js
+│   ├── .env.example
+│   └── server.js              # Express + Socket.IO entry point
+├── Frontend/
+│   ├── src/app/
+│   │   ├── components/        # Chatbot widget, UI primitives & admin components
+│   │   ├── contexts/          # Auth, ChatAuth, Theme & TutorOnboarding contexts
+│   │   ├── pages/             # 35+ role-based pages & workflows
+│   │   └── utils/             # REST & Socket.IO service wrappers
+│   └── package.json
+└── LICENSE
 ```
 
 </details>
@@ -93,7 +93,7 @@ Tutor-Booking-System/
 
 ### Prerequisites
 - **Node.js 18+** and **npm**
-- **MongoDB** (optional â€” if unreachable, the backend automatically starts with an in-memory database seeded from `Backend/data/json/`)
+- **MongoDB** (optional — if unreachable, the backend automatically starts with an in-memory database seeded from `Backend/data/json/`)
 
 ### 1. Clone the Repository
 ```bash
@@ -135,7 +135,7 @@ Default credentials seeded for local testing (after running `Backend/clear-and-r
 
 ## License
 
-Released under the [MIT License](LICENSE) Â© 2026 [Akil Shehan](https://github.com/Sh3hann).
+Released under the [MIT License](LICENSE) © 2026 [Akil Shehan](https://github.com/Sh3hann).
 
 <div align="center">
 
