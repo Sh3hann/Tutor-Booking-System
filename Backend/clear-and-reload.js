@@ -33,8 +33,6 @@ async function clearAndReload() {
       'tutor@gmail.com': 'password123',
       'tutor1@gmail.com': 'password123',
       'admin@gmail.com': 'admin@gmail.com',
-      'methvanjayaweera@gmail.com': 'password123',
-      'achintha@gmail.com': 'password123',
     };
     
     for (const user of usersData) {

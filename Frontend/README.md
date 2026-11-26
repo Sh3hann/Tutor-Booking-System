@@ -1,11 +1,14 @@
+# TutorHub Frontend
 
-  # Tutor Registration Website
+React + Vite + TypeScript client application for the **TutorHub (Tutor Booking System)** platform.
 
-  This is a code bundle for Tutor Registration Website. The original project is available at https://www.figma.com/design/wKM5JQe9EalE64zoqAUS3m/Tutor-Registration-Website.
+For full architecture, backend setup, environment variables, and demo accounts, see the [root README](../README.md).
 
-  ## Running the code
+## Scripts
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm install
+npm run dev      # Start Vite dev server
+npm run build    # Build production bundle
+npm run preview  # Preview production build
+```
